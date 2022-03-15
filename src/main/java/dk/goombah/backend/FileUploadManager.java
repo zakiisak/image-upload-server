@@ -1,6 +1,5 @@
 package dk.goombah.backend;
 
-import com.amazonaws.services.appmesh.model.Backend;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
