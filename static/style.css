@@ -1,0 +1,14 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    display: none;
+}
+
+.niceBox {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    border-radius: 7px;
+    background-color: white;
+    padding: 8px;
+}
