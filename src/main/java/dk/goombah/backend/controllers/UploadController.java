@@ -11,6 +11,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
 import java.util.*;
@@ -49,7 +50,7 @@ public class UploadController {
                         //if(file.exists())
                         //    file.delete();
 
-                        Files.writeString(new File("keys.txt").toPath(), output, StandardOpenOption.CREATE);
+                        Files.write(new File("keys.txt").toPath(), output.getBytes(StandardCharsets.UTF_8));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

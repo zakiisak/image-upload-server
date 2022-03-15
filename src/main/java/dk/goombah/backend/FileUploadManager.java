@@ -47,9 +47,10 @@ public class FileUploadManager {
                 filePath = rootDirectory + localDirectoryPath + "/" + fileName;
             } while(new File(filePath).exists());
 
-            new File(filePath).mkdirs();
+            File file = new File(filePath);
+            file.mkdirs();
 
-            Files.copy(fileStream, Path.of(filePath), StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(fileStream, file.toPath(), StandardCopyOption.REPLACE_EXISTING);
             return BackendApplication.getBackendUrl();
         }
         catch(Exception e)
