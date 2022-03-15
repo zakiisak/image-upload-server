@@ -22,7 +22,7 @@ public class BackendApplication implements CommandLineRunner {
 	}
 
 	public static String getBackendUrl() {
-		return testMode ? "http://localhost:7443/" : "https://backend.goombah.dk/";
+		return testMode ? "http://localhost:7443/" : "https://icurety.com/";
 	}
 
 	@Bean
